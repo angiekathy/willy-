@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width =device-width, initial-scale=1.0">
+    <title>All Products- Pixels Electronics</title>
+    <link rel="stylesheet"href="style.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo-color.png" width="125px"></a>
+        </div>
+         <nav>
+         <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="Payment.html">contact</a></li>
+          <li><a href="Account.html">Account</a></li>
+         </ul>
+         </nav>
+         <img  src="images/add_to_cart-removebg-preview.png" width="30px"height="30px">
+         <img  src="images/menubar22-removebg-preview (1).png" class="menu icon"
+          onclick="menubar()" >
+      </div>
+      </div>
+   <!----checkout---->
+    <form action="process-payment.php" method="POST">
+      <label for="payment-method">Select Payment Method:</label>
+      <select name="payment-method" id="payment-method">
+       <option value="mpesa">M-pesa</option>
+       <option value="Cash" >Cash</option>
+      </select>
+      <div id="mpesa details">
+        <label for="phone-number">M-pesa phone Number</label>
+        <input type="text" name="phone-number" id="phone-number" required>
+      </div>
+      <a href="shopping cart.html" class="btn">proceed to pay</a>
+    </form>
+  <!-----footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+<h3>Acces Our Website</h3>
+<p>Visit our website for quick understanding of our Products</p>
+<div class="app logo">
+  <img src="images/playstore-removebg-preview.png">
+  <img src="images/appstore_icon-removebg-preview.png">
+</div>
+        </div>
+        <div class="footer-col-2">
+          <img src="images/logo-color.png"> 
+          <p>Our mission is to ensure that our customers enjoy our services perfectly and they in a position of shopping with us again</p>  
+      </div>
+      <div class="footer-col-3">
+        <h3>Useful links</h3>
+        <ul>
+          <li>coupons</li>
+          <li>Blog post</li>
+          <li>Return policy </li>
+          <li>Join Affliate </li>
+        </ul>
+    </div>
+    <div class="footer-col-3">
+      <h3>Follow Us</h3>
+      <ul>
+        <li>Twitter</li>
+        <li>Telegram</li>
+        <li>Facebook </li>
+        <<li>Instagram </li>
+      </ul>
+   </div>   
+  </div>
+  <hr>
+  <p class="Copyright">Copyright-Easy Tutorial</p>
+  </div>
+  </div>
+  <!------js for checkout---->
+  <script>
+    document.getElementById('payment-method').addEventListener('change', function(){
+     document.getElementById('mpesa-details').style.display = this.value=== 'mpesa' ? 'block' : 'none';
+    }); 
+  </script>
+
+  </body>
+  </html>
